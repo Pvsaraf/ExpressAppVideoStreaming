@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express.js Video Streaming App</title>
+</head>
+
+
+<body>
+    <!-- <script>
+        function check()
+        {
+            console.log("HEREE.....");
+            var Pres = (document.getElementById("file").value);
+            var filename = Pres.replace(/^.*[\\\/]/, '')
+            console.log(filename);
+            if(typeof(Pres)!="undefined" && Pres!=null)
+            {   
+                if(filename.slice(-4) != ".mp4")
+                {
+                    console.log("Select the file of the proper format .mp4");
+                }
+                else
+                {
+                    window.location.href = "/play";
+                }
+            }
+            else{
+                console.log("Please choose the file");
+            }
+        }
+
+        function download()
+        {
+            console.log("HEREE.....2");
+            var Pres = (document.getElementById("file").value);
+            var filename = Pres.replace(/^.*[\\\/]/, '')
+            console.log(filename);
+            if(typeof(Pres)!="undefined" && Pres!=null)
+            {   
+                if(filename.slice(-4) != ".mp4")
+                {
+                    console.log("Select the file of the proper format .mp4");
+                }
+                else
+                {
+                    
+                }
+            }
+            else{
+                console.log("Please choose the file");
+            }
+        }
+    </script> -->
+    <!-- <form> -->
+        <!-- <input type="file" id = "file" placeholder="Upload" title="Upload">
+        <button onclick= check()>Stream</button>
+        <button onclick= download()>Download</button> -->
+    <!-- </form> -->
+    <video src = "/play" width="1080" controls></video>
+    <br>
+    <button onclick="clickFun()"> Download </button>
+    <script>
+        function clickFun() {
+            window.location = '/download';
+        }
+    </script>
+
+</body>
+</html>
